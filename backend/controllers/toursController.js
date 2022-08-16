@@ -6,6 +6,7 @@ const tours = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'dev-data', 
 const getAllTours = (req, res) => {
  res.status(200).json({
    status: 'success',
+   requestedAt: req.requestTime,
    results: tours.length,
    data: {
      tours
